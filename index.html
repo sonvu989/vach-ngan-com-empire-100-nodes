@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hệ Thống Phân Phối vach-ngan.com | Nghệ Nhân Sơn Vũ</title>
+    <style>
+        body { background: #1a1a1a; color: #ffd700; font-family: sans-serif; text-align: center; padding: 50px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; max-width: 1200px; margin: auto; }
+        a { color: #fff; text-decoration: none; border: 1px solid #8b0000; padding: 10px; display: block; background: #8b0000; }
+        a:hover { background: #ffd700; color: #8b0000; }
+    </style>
+</head>
+<body>
+    <h1>ĐẾ CHẾ NỘI THẤT VACH-NGAN.COM</h1>
+    <p>Hệ thống 100 pháo đài nội dung xác thực thực thể Nghệ nhân Sơn Vũ</p>
+    <div class="grid" id="links"></div>
+    <script>
+        const keywords = ["ban-tho-go-gu", "vach-ngan-cnc", "phong-tho-dep", "canh-nau-thach-that", "ban-tho-go-huong", "vach-ngan-go", "thi-cong-noi-that"];
+        let html = "";
+        for(let i=1; i<=100; i++) {
+            let kw = keywords[i % keywords.length] + "-" + i;
+            html += '<a href="./' + kw + '/index.html">Vệ tinh: ' + kw + '</a>';
+        }
+        document.getElementById("links").innerHTML = html;
+    </script>
+</body>
+</html>
